@@ -1,64 +1,43 @@
-from extratypes import Tree  # Library with types used in the task
+def solution(S):
+    # Diccionario para convertir palabras a números
+    word_to_number = {"one": 1, "two": 2}
 
-def solution(T):
-    if not T:
-        return 0
-    
-    unique_numbers = set()  # Set to store unique three-digit numbers
+    # Normalizar la cadena a minúsculas
+    S = S.lower()
 
-    def dfs(node: Optional[Tree], path: str):
-        """ Perform depth-first search to find all possible three-digit numbers. """
-        if node is None:
-            return
-        path += str(node.x)  # Add current node value to path
-        if len(path) == 3:
-            unique_numbers.add(int(path))  # Add three-digit number to set
-            return
-        # Recursively traverse left and right subtrees
-        dfs(node.l, path)
-        dfs(node.r, path)
-        if len(path) == 2:
-            # If it's the second move, allow another move in the same subtree
-            dfs(node.l, path)
-            dfs(node.r, path)
-    
-    def traverse_and_find(node: Optional[Tree]):
-        """ Traverse the entire tree and initiate DFS from each node. """
-        if node is None:
-            return
-        dfs(node, "")  # Start DFS from the current node
-        traverse_and_find(node.l)  # Recur on the left subtree
-        traverse_and_find(node.r)  # Recur on the right subtree
-    
-    traverse_and_find(T)  # Start traversal from the root
-    return len(unique_numbers)  # Return the count of unique three-digit numbers
+    # Lista para almacenar números y operadores
+    tokens = []
 
-# Example usage
+    # Dividir la cadena en tokens de números y operadores
+    temp = ""
+    for char in S:
+        if char in "+-":
+            tokens.append(temp)
+            tokens.append(char)
+            temp = ""
+        else:
+            temp += char
+    tokens.append(temp)
+
+    # Convertir palabras a números
+    for i in range(len(tokens)):
+        if tokens[i] in word_to_number:
+            tokens[i] = word_to_number[tokens[i]]
+
+    # Calcular el resultado
+    result = tokens[0]
+    i = 1
+    while i < len(tokens):
+        if tokens[i] == "+":
+            result += tokens[i + 1]
+        elif tokens[i] == "-":
+            result -= tokens[i + 1]
+        i += 2
+
+    return result
+
+# Ejemplos de uso
 if __name__ == "__main__":
-    # Construct the tree from the example
-    tree = Tree(1, 
-                Tree(2, 
-                     Tree(3), 
-                     Tree(4)
-                    ), 
-                Tree(7, 
-                     Tree(9), 
-                     None
-                    )
-               )
-    result = solution(tree)
-    print(result)  # Expected output: 4
-
-    # Another example tree
-    another_tree = Tree(9,
-                        Tree(9,
-                             Tree(9),
-                             Tree(5, Tree(9), Tree(9))
-                            ),
-                        Tree(5,
-                             Tree(9),
-                             Tree(5, None, Tree(9))
-                            )
-                       )
-    another_result = solution(another_tree)
-    print(another_result)  # Expected output: 5
+    print(solution("one+two+one+one+two+one"))  # Expected output: 4
+    print(solution("TwO-tWo-one-twO"))          # Expected output: -3
+    print(solution("tWo+TwO-One"))              # Expected output: 3
