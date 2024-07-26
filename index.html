@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qhronus.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="flex" id="navbar">
+        <a href="#hero" class="logo"></a>
+        <div class="links flex">
+            <div onclick="showmenu()" class="flex navText">
+                <a href="#casosdeuso">Casos de uso</a>
+                <a href="#servicios">Sobre nosotros</a>
+                <a href="#proceso">Nuestro proceso</a>
+            </div>
+            <a class="cta" href="#">contáctanos</a>
+        </div>
+    </div>
+    <div id="navmen">
+        <div onclick="hidemenu()" class="cancel"></div>
+        <a href="#casosdeuso">Casos de uso</a>
+        <a href="#servicios">Sobre nosotros</a>
+        <a href="#proceso">Nuestro proceso</a>
+        <a href="#">Contáctanos</a>
+    </div>
+    <div id="hero">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/1-B0WOvcXf9juUIe/scene.splinecode"></spline-viewer>
+        <video autoplay loop muted playsinline>
+            <source src="images/heroBackgroundMobileEsp.webm" type="video/webm">
+            your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="separadorHero"></div>
+    <div id="casosdeuso">
+        <div id="contenidoCasos">
+            <div onclick="casosdeuso0()"  class="containercasos" id="container1">
+                <div class="iconCont"></div>
+                <div class="img1"></div>
+                <div class="img2"></div>
+                <h3>planeamos</h3>
+                <h3>hacemos</h3>
+                <h3>lanzamos</h3>
+                <p>Nos especializamos en <span class="bolditalic">soluciones innovadoras</span> para desafíos tecnológicos</p>
+                <button class="buttonCont1 flex">
+                    <p>Casos de uso</p>
+                    <div  class="sig"></div>
+                </button>
+                
+            </div>
+            <div onclick="casosdeuso1()"  class="containercasos flex" id="container2">
+                <div class="fondo"></div>
+                <div class="iconCont"></div>
+                <div class="text">
+                    <h2>Branding</h2>
+                    <p>Diseño de identidad visual</p>
+                </div>
+            </div>
+            <div onclick="casosdeuso2()" class="containercasos flex" id="container3">
+                <div class="fondo"></div>
+                <div class="iconCont"></div>
+                <div class="text">
+                    <h2>Aplicaciones</h2>
+                    <p>Web apps y nativas</p>
+                </div>
+            </div>
+            <div onclick="casosdeuso3()" class="containercasos flex" id="container4">
+                <div class="fondo"></div>
+                <div class="iconCont"></div>
+                <div class="text">
+                    <h2>Páginas web</h2>
+                    <p>Diseño y desarrollo premium</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="servicios">
+        <h2>Creemos que lo que puede verse <span class="highlight">puede transformar </span> </h2>
+        <div id="serviciosText">
+            <div class="flex">
+                <p class="leftservices">Conocemos el poder de la estética para asegurar experiencias memorables. Es por esto que <span class="bolditalic"> no solo desarrollamos proyectos </span>sino que los diseñamos desde el principio</p>
+                <div class="list">
+                    <div id="servicio1">
+                        <div id="consultorias">
+                            <div class="flexArrow">
+                                <h3>Consultorías</h3>
+                                <div onclick="elegirServicio1()" class="arrow"></div>
+                            </div>
+                            <p class="latoLightDescribe" >Ofrecemos consultorías para identificar y resolver retos tecnológicos, alineando soluciones con tus objetivos de negocio para maximizar resultados.</p>
+                        </div>
+                    </div>
+                    <div id="servicio2">
+                        <div id="Branding">
+                            <div class="flexArrow">
+                                <h3>Branding</h3>
+                                <div onclick="elegirServicio2()" class="arrow"></div>
+                            </div>
+                            <p class="latoLightDescribe" >Transformamos tu marca con estrategias de branding efectivas. Desde logotipos hasta manuales de marca, aseguramos una identidad visual impactante.</p>
+                        </div>
+                    </div>
+                    <div id="servicio3">
+                        <div id="Diseño de producto">
+                            <div class="flexArrow">
+                                <h3>Diseño de producto</h3>
+                                <div onclick="elegirServicio3()" class="arrow"></div>
+                            </div>
+                            <p class="latoLightDescribe" >Creamos interfaces intuitivas y atractivas que mejoran la experiencia del usuario, garantizando productos digitales funcionales y estéticamente agradables.</p>
+                        </div>
+                    </div>
+                    <div id="servicio4">
+                        <div id="Desarrollo">
+                            <div class="flexArrow">
+                                <h3>Desarrollo</h3>
+                                <div onclick="elegirServicio4()" class="arrow"></div>
+                            </div>
+                            <p class="latoLightDescribe" >Construimos aplicaciones web y móviles robustas y escalables con las últimas tecnologías, superando expectativas en rendimiento y seguridad.</p>
+                        </div>
+                    </div>
+                    <div id="servicio5">
+                        <div id="Marketing">
+                            <div class="flexArrow">
+                                <h3>Marketing</h3>
+                                <div onclick="elegirServicio5()" class="arrow"></div>
+                            </div>
+                            <p class="latoLightDescribe" >Potencia tu presencia online con nuestras estrategias de marketing digital. Aumentamos la visibilidad de tu marca, impulsamos el tráfico y generamos conversiones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="separadorHero2"></div>
+    <div id="proceso">
+        <div class="texto">
+            <h2><span class="highlight">Trabajamos en equipo</span> para asegurar tus resultados</h2>
+            <div class="contitems"> 
+                <div class="flexcont">
+                    <div class="iconoLista"></div>
+                    <div class="rightproceso">
+                        <h3>Analizamos tu proyecto</h3>
+                        <p class="latoReadText">Realizamos un análisis exhaustivo de tus necesidades y objetivos para definir una estrategia precisa que guíe todo el desarrollo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contitems">
+                <div class="flexcont">
+                    <div class="iconoLista"></div>
+                    <div class="rightproceso">
+                        <h3>Planeamos</h3>
+                        <p class="latoReadText">Elaboramos un plan detallado que define los pasos, recursos y plazos. Nos aseguramos de que todo esté alineado con tus metas para un proyecto exitoso.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contitems">
+                <div class="flexcont">
+                    <div class="iconoLista"></div>
+                    <div class="rightproceso">
+                        <h3>Diseñamos</h3>
+                        <p class="latoReadText">Creamos interfaces intuitivas y atractivas diseñadas para optimizar la experiencia del usuario final, asegurando cada detalle para una navegación fluida y memorable.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contitems">
+                <div class="flexcont">
+                    <div class="iconoLista"></div>
+                    <div class="rightproceso">
+                        <h3>Desarrollamos</h3>
+                        <p class="latoReadText">Utilizamos tecnologías avanzadas y metodologías ágiles para un desarrollo eficiente y de alta calidad, adaptado a tus requerimientos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contitems">
+                <div class="flexcont">
+                    <div class="iconoLista"></div>
+                    <div class="rightproceso">
+                        <h3>Lanzamos</h3>
+                        <p class="latoReadText">Realizamos pruebas previas para asegurar el rendimiento y la seguridad antes del lanzamiento oficial. Garantizamos una implementación sin contratiempos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky">
+            <div class="sticky2"></div>
+        </div>
+    </div>
+    
+    <div class="stickycontainer">
+        <div class="img">
+            <video autoplay loop muted playsinline>
+                <source src="images/glass-qhronus.webm" type="video/webm">
+                your browser does not support the video tag.
+            </video>
+            <div id="separadorHero3"></div>
+        </div>
+    </div>
+    <div id="separadorHero"></div>
+    <div id="separador"></div>
+    <div id="valueproposition">
+        <div id="value1" class="container"></div>
+        <div id="value2" class="container"></div>
+        <div id="value3" class="container"></div>
+        <div id="value4" class="container"></div>
+        <div id="value5" class="container"></div>
+        <div id="value6" class="container"></div>
+        <div id="value7" class="container"></div>
+        <div id="value8" class="container"></div>
+    </div>
+    <div class="ultimasSecciones">
+        <div class="CTA">
+            <div class="imgCTA"></div>
+            <div class="text">
+                <h2>Tus proyectos</h2>
+                <h3><span class="highlight">al siguiente nivel</span></h3>
+                <button>
+                    <p>Agenda una reunión</p>
+                </button>
+            </div>
+        </div>
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="FAQ flex">
+            <div class="left">
+                <h3>Tienes preguntas? <span class="highlight">Hablemos</span></h3>
+                <p>
+                    Ingresa tu correo electrónico y nos pondremos en contacto contigo lo antes posible :)
+                </p>
+                <div class="input">
+                    <input placeholder="Ingresa tu email" type="text">
+                    <div class="enviar"></div>
+                </div>
+            </div>
+            <div class="right">
+                <h3 class="tituloright">Tal vez puedas encontrar algunas respuestas aquí:</h3>
+                <div onClick="elegirFAQ1()" class="pregunta" id="pregunta1">
+                    <h3>Cómo se cobra cada proyecto?</h3>
+                    <div class="icon iconp1"></div>
+                </div>
+                <p class="pPregunta1">Qhronus ofrece soluciones tecnológicas personalizadas, fusionando análisis, experiencia, tecnología y estética.</p>
+                <hr>
+                <div onClick="elegirFAQ2()" class="pregunta">
+                    <h3>Qué necesito para trabajar con Qhronus?</h3>
+                    <div class="icon iconp2"></div>
+                </div>
+                <p class="pPregunta2">Qhronus ofrece soluciones tecnológicas personalizadas, fusionando análisis, experiencia, tecnología y estética.</p>
+                <hr>
+                <div onClick="elegirFAQ3()" class="pregunta">
+                    <h3>Debo hacer mi proyecto de cero?</h3>
+                    <div class="icon iconp3"></div>
+                </div>
+                <p class="pPregunta3">Qhronus ofrece soluciones tecnológicas personalizadas, fusionando análisis, experiencia, tecnología y estética.</p>
+            </div>
+        </div>
+    </div>
+    <div id="Footer">
+        <div class="footercontainer">
+            <div class="flex">
+                <div class="logofooter"></div>
+                <div class="text">
+                    <div class="column">
+                        <h4>Product</h4>
+                        <div class="columntext">
+                            <a href="#">Freatures</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">case studies</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">Updates</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4>Company</h4>
+                        <div class="columntext">
+                            <a href="#">About</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">case studies</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">Updates</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4>Support</h4>
+                        <div class="columntext">
+                            <a href="#">About</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">case studies</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">Updates</a>
+                        </div>
+                    </div>
+                    <div class="column contact">
+                        <h4>Contact us</h4>
+                        <div class=" mail">
+                            <div class="icon"></div>
+                            <a href="#">Qhronusteam@gmail.com</a>
+                        </div>
+                        <div class=" linkedin">
+                            <div class="icon"></div>
+                            <a href="#">@Qhronus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex copyright">
+                <p>Copyright © 2024 Qhronus.</p>
+                <a class="icons8" href="">Icons by Icons8</a>
+                <div class="flex">
+                    <p>Derechos reservados</p>
+                    <p class="pseparador">|</p>
+                    <a href="#">Terminos y condiciones</a>
+                    <p class="pseparador">|</p>
+                    <a href="#">Políticas de privacidad</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="splashscreen">
+        <div class="logo2"></div>
+    </div>
+
+</div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script src="js/main.js" type="text/javascript"> </script>
+<script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+
+<script>
+    const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
+</html>
