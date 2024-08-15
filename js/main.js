@@ -484,7 +484,7 @@ function handleScreenChange(event) {
         gsap.to("#value6",{
             scrollTrigger:{
                 trigger:"#valueproposition",
-                start: '20% center',
+                start: '5% center',
                 end: '40% center',
                 scrub: false,
                 markers: false,
@@ -498,7 +498,7 @@ function handleScreenChange(event) {
         gsap.to("#value7",{
             scrollTrigger:{
                 trigger:"#valueproposition",
-                start: '20% center',
+                start: '5% center',
                 end: '40% center',
                 scrub: false,
                 markers: false,
@@ -513,7 +513,7 @@ function handleScreenChange(event) {
         gsap.to("#value8",{
             scrollTrigger:{
                 trigger:"#valueproposition",
-                start: '20% center',
+                start: '5% center',
                 end: '40% center',
                 scrub: false,
                 markers: false,
@@ -987,7 +987,8 @@ function casosdeuso2() {
             height: "32vw",
             width: "7vw",
             padding: "0vw",
-            zIndex: "20" 
+            zIndex: "20",
+            duration: 1
         })
     
         gsap.to("#container2 .fondo",{
@@ -1103,7 +1104,8 @@ function casosdeuso3() {
         height: "28vw",
         width: "7vw",
         padding: "0vw",
-        zIndex: "20" 
+        zIndex: "20",
+        duration: 1
     })
 
     gsap.to("#container2 .fondo",{
