@@ -17,7 +17,21 @@ body, html {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: var(--color-gris);
+    caret-color: transparent;
 }
+
+::selection {
+    background-color:var(--color-principal); /* Color de fondo para la selección */
+    color: #FFF; /* Color del texto durante la selección */
+}
+
+/* Esto cambiará el color de fondo y el color del texto cuando se selecciona en Firefox */
+::-moz-selection {
+    background-color:var(--color-principal); /* Color de fondo para la selección */
+    color: #FFF; /* Color del texto durante la selección */
+}
+
+
 
 :root{
     /*COLORS*/
@@ -153,16 +167,16 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: var(--rethink-regular);
+    border-radius: 0.5vw;
     color: var(--color-gris);
-    background-color: #6B95FF;
+    background: linear-gradient(0deg, #9BB6FB 7.35%, #7097F9 76.41%);
     transition: 0.5s;
 }
 
 .links .cta:hover{
     scale: 1.1;
     font-weight: var(--rethink-medium);
-    color: var(--color-principal);
-    text-decoration: underline;
+    color: #FFF;
     background-color: var(--color-gris);
     transition: 0.5s;
 }
@@ -219,7 +233,7 @@ spline-viewer {
 }
 
 #contenidoCasos{
-    margin-top: 8vw;
+    margin-top: 5vw;
     opacity: 0;
     display: flex;
     align-items: center;
@@ -405,7 +419,7 @@ spline-viewer {
     background-image: url(../images/casosdeuso/fondobranding.webp);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: #fff;
     opacity: 0;
 
@@ -504,7 +518,7 @@ spline-viewer {
     background-image: url(../images/casosdeuso/fondoweb.webp);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: #fff;
     opacity: 0;
 }
@@ -603,13 +617,14 @@ spline-viewer {
 .list{
     width: 30vw;
     margin-right: 4.2vw;
+    margin-top: -1vw;
 }
 
 .list h3{
     font-family: var(--rethink);
     font-size: 2vw;
-    font-weight: var(--rethink-regular);
-    color: var(--color-gris-texto);
+    font-weight: 200;
+    color: #7F829C;
     margin-top: 0.8vw;
 }
 
@@ -879,7 +894,7 @@ spline-viewer {
     background-color: var(--color-gris);
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -902,6 +917,7 @@ spline-viewer {
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: var(--color-gris);
     
 }
 
@@ -1237,15 +1253,15 @@ input, textarea, select, button {
         z-index: 998;
         top: 0vh;
         left: 101vw;
+        opacity: 0;
         position: fixed;
-        height: 60vh;
-        padding: 20vh 0vh;
+        height: 100vh;
+        padding: 15vh 0vh;
         width: 100vw;
         background-color: var(--color-gris);
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
         font-family: var(--rethink);
     }
 
@@ -1267,13 +1283,18 @@ input, textarea, select, button {
     #navmen a{
         text-decoration: none;
         font-weight: var(--rethink-semibold);
-        font-size: 4vw;
+        margin-bottom: 6vh;
+        font-size: 4.5vw;
         color: #080A1F;
     }
 
     #navmen a:nth-child(5){
-        color: #6B95FF;
-        text-decoration: underline;
+        padding: 1vh 6vw;
+        border-radius: 0.5vh;
+        width: fit-content;
+        height: fit-content;
+        color: #ffffff;
+        background: linear-gradient(0deg, #9BB6FB 7.35%, #7097F9 76.41%);
     }
 
 
@@ -1322,6 +1343,11 @@ input, textarea, select, button {
         display: inherit;
         margin-top: 18vw;
         width: 100vw;
+    }
+
+    #separadorHero{
+        height: 12vw;
+        margin-top: -6vw;
     }
 
 /*CASOS DE USO*/
@@ -1545,20 +1571,23 @@ input, textarea, select, button {
 
     /*PROCESO*/
 
-
     .stickycontainer .img{
         top: 5vh;
         left: 0;
-        background: linear-gradient(0deg, rgba(249, 248, 248, 0.00) 0%, #F9F8F8 50.3%);
+        background: linear-gradient(0deg, rgba(249, 248, 248, 0.00) 2%, #F9F8F8 50.3%);
         width: 100vw;
         height: 140vw;
         opacity: 0;
     }
 
     .stickycontainer video{
-        width: 100vw;
-        height: 110vw;
+        width: 81vw;
+        height: 81vw;
         z-index: 2;
+    }
+
+    .img video{
+        top: 45%;
     }
 
     #proceso h2{
@@ -1591,11 +1620,11 @@ input, textarea, select, button {
     }
 
     #separadorHero3{
-        top: 115vw;
+        top: 0vw;
         display: inherit;
         width: var(--anchopantalla);
-        height: 7vh;
-        background: linear-gradient(0deg, rgba(249, 248, 248, 0.00) 0%, #F9F8F8 50.3%);
+        height: 130vw;
+        background: linear-gradient(0deg, rgba(249, 248, 248, 0.00) 0%, #F9F8F8 10.3%);
         margin-top: 0;
         z-index: 1;
         position: relative;
@@ -1770,20 +1799,20 @@ input, textarea, select, button {
     }
 
     .FAQ .left h3{
-        font-size: 7vw;
-        margin-bottom: 3vw;
+        font-size: 10vw;
+        margin-bottom: 1vw;
     }
 
     .FAQ p{
-        font-size: 4vw;
+        font-size: 5vw;
         width: 70%;
         margin-bottom: 3vw;
     }
 
     
     .FAQ .input{
-        height: 7vw;
-        width: 60vw;
+        height: 10vw;
+        width: 80vw;
         margin-top: 8vw;
         background-color: #FFF;
         border-radius: 1.5vw;
@@ -1795,14 +1824,14 @@ input, textarea, select, button {
     }
 
     .FAQ .input input{
-        height: 7vw;
-        width: 20vw;
+        height: 10vw;
+        width: 45vw;
         color: var(--color-gris-texto);
         background-color: #FFF;
         border: none;
         font-family: var(--lato);
         font-weight: var(--lato-light);
-        font-size: 3vw;
+        font-size: 4vw;
         padding-left: 3vw;
     }
 
@@ -1812,8 +1841,8 @@ input, textarea, select, button {
     }
 
     .FAQ .input .enviar{
-        height: 7vw;
-        width: 10vw;
+        height: 10vw;
+        width: 15vw;
         background-image: url(../images/chevron-right-solid-white.svg);
         background-size: 2vw;
         background-repeat: no-repeat;
@@ -1823,6 +1852,10 @@ input, textarea, select, button {
 
     .FAQ .right{
         width: 100%;
+    }
+
+    .FAQ .right p{
+        font-size: 4vw;
     }
 
     .tituloright{
