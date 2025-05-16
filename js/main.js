@@ -4106,31 +4106,20 @@ window.addEventListener ("scroll", function (){
 })
 
 
-//INGLÉS
+let width = window.innerWidth;
 
-const translations = {
-    "en": {
-        "txtnav1": "Use Cases",
-        "txtnav2": "About Us",
-        "txtnav3": "Our Process",
-        "menu-contacto": "Contact Us"
-    },
-    // Otros idiomas podrían agregarse aquí
-};
+window.addEventListener('resize', function() {
+    // Verificar si ha cambiado de un estado a otro (más o menos de 550px o 1020px)
+    if (
+        (width > 550 && window.innerWidth <= 550) || 
+        (width <= 550 && window.innerWidth > 550) ||
+        (width > 1020 && window.innerWidth <= 1020) || 
+        (width <= 1020 && window.innerWidth > 1020)
+    ) {
+        // Recargar la página si el ancho cruza el umbral de 550px o 1020px
+        window.location.reload();
+    }
 
-// Detectar el idioma del navegador
-const userLang = navigator.language || navigator.userLanguage;
-
-// Si el idioma no es español, aplicar las traducciones
-if (!userLang.startsWith('es')) {
-    applyTranslations("en");
-}
-
-// Función para aplicar traducciones
-function applyTranslations(lang) {
-    const translation = translations[lang];
-    document.getElementById("menu-casos").textContent = translation["menu-casos"];
-    document.getElementById("menu-servicios").textContent = translation["menu-servicios"];
-    document.getElementById("menu-proceso").textContent = translation["menu-proceso"];
-    document.getElementById("menu-contacto").textContent = translation["menu-contacto"];
-}
+    // Actualizar el valor del ancho de la ventana
+    width = window.innerWidth;
+});

@@ -694,10 +694,13 @@ spline-viewer {
     font-size:var(--titulos);
     text-align: left;
     margin-bottom: 4.5vw;
-    width: 40vw;
+    width: 32vw;
     opacity: 0;
     margin-top: 3vw;
+    text
 }
+
+
 
 .flexcont{
     display: flex;
