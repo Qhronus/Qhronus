@@ -9,6 +9,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.notice{
+    position: fixed;
+    font-size: 1vw;
+    top: 50vw;
+    z-index: 100;
+    left: 50vw;
+    transform: translateX(-50%);
+    font-family: var(--rethink);
+    background-color: var(--color-gris);
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -1236,6 +1247,20 @@ input, textarea, select, button {
 
     ::-webkit-scrollbar{
         width: 0px;
+    }
+
+    
+    .notice{
+        position: fixed;
+        width: 100vw;
+        text-align: center;
+        font-size: 3vw;
+        top: 160vw;
+        z-index: 100;
+        left: 50vw;
+        transform: translateX(-50%);
+        font-family: var(--rethink);
+        background-color: #f9f8f800;
     }
     
 
