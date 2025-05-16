@@ -12,7 +12,7 @@ html {
 .notice{
     position: fixed;
     font-size: 1vw;
-    top: 50vw;
+    top: 90vh;
     z-index: 100;
     left: 50vw;
     transform: translateX(-50%);
